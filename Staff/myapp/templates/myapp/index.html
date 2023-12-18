@@ -12,6 +12,7 @@
                          <th>Цена</th>
                          <th>Количество</th>
                          <th>Адрес заказа</th>
+                         <th>Фотография</th>
                          <th>Действие</th>
                      </tr>
         {% if tasks %}
@@ -20,7 +21,8 @@
                         <td>{{ el.name }}</td>
                         <td>{{ el.place }}</td>
                         <td>{{ el.price }}</td>
-                         <td>{{ el.square }}</td>
+                        <td>{{ el.square }}</td>
+                        <td>{{ el.img }}</td>
                          <td>
                              <a href="{% url 'task-delete' el.id %}" class="btn btn-warning">Удалить</a>
                              <a href="{% url 'task-update' el.id %}" class="btn btn-info">Peдактировать</a>
