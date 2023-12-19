@@ -11,6 +11,9 @@ def index(request):
 def rasp(request):
     return render(request, 'myapp/rasp.html')
 
+def news(request):
+    return render(request, 'myapp/news.html')
+
 def create(request):
     error = ''
     if request.method == "POST":
