@@ -19,6 +19,7 @@ class Migration(migrations.Migration):
                 ('material', models.CharField(max_length=100, verbose_name='Материал')),
                 ('price', models.IntegerField(default=100, verbose_name='Цена')),
                 ('kolvo', models.IntegerField(default=0, verbose_name='Количество')),
+                ('img', models.ImageField(upload_to="img", default=None, blank=True, null=True, verbose_name="Фото"))
             ],
             options={
                 'verbose_name': 'Работники',

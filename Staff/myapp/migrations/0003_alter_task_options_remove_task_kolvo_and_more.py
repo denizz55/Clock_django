@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('myapp', '0002_alter_task_options_alter_task_material'),
     ]
@@ -12,7 +11,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='task',
-            options={'verbose_name': 'Здание', 'verbose_name_plural': 'Здания'},
+            options={'verbose_name': 'clock', 'verbose_name_plural': 'clock'},
         ),
         migrations.RemoveField(
             model_name='task',
@@ -20,7 +19,7 @@ class Migration(migrations.Migration):
         ),
         migrations.RemoveField(
             model_name='task',
-            name='material',
+            name='',
         ),
         migrations.AddField(
             model_name='task',
@@ -30,6 +29,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='task',
             name='square',
-            field=models.IntegerField(default=0, verbose_name='Площадь'),
+            field=models.IntegerField(default=0, verbose_name='Адрес'),
+        ),
+        migrations.AddField(
+            model_name='task',
+            name='img',
+            field=models.ImageField(upload_to="img", default=None, blank=True, null=True, verbose_name="Фото"),
         ),
     ]

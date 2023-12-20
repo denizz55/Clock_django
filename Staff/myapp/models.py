@@ -9,7 +9,7 @@ class Task(models.Model):
 
 
     @property
-    def photo_url(self):
+    def img_url(self):
         if self.img and hasattr(self.img, 'url'):
             return self.img.url
 
